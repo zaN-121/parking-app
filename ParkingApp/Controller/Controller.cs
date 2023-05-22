@@ -17,32 +17,26 @@ public class Controller
     {
         showBanner();
         
-        // Console.WriteLine("=------- CREATE PARKING SLOT ----------> ");
-        // Console.Write("> ");
-        // var input = Console.In.ReadLine();
-        // InputValidator.validateIntInput(input);
-        // try
-        // {
-        //     parkingService.parkingRepository.totalSlot = int.Parse(input);
-        //
-        // }
-        // catch (Exception e)
-        // {
-        //     Console.WriteLine("");
-        // }
-        var indikator = true;
-        while (indikator)
+        var validStringInput = "";
+        
+        while (validStringInput.Equals(""))
         {
-            indikator = showFormSlot();
+            validStringInput = showFormSlot();
         }
-        Console.WriteLine($"Created a parking lot with  slots\n\n");
+        Console.WriteLine($"Created a parking lot with {validStringInput} slots\n\n");
         while (true)
         {
-            showMenu();
+            validStringInput = "";
+            while (validStringInput.Equals(""))
+            {
+                validStringInput = showMenu();
+            }
+            
+            excecuteChoosedMenu(validStringInput);
         }
     }
 
-    public bool showFormSlot()
+    public string showFormSlot()
     {
         Console.WriteLine("=------- CREATE PARKING SLOT ----------> ");
         Console.Write("> ");
@@ -56,10 +50,10 @@ public class Controller
         catch (Exception e)
         {
             Console.WriteLine("");
-            return true;
+            return "";
         }
 
-        return false;
+        return input;
     }
 
     public void showBanner()
@@ -68,9 +62,8 @@ public class Controller
         Console.WriteLine("------------- PARKING APP ---------------");
         Console.WriteLine("=========================================");
     }
-    
 
-    public void showMenu()
+    public string showMenu()
     {
         Console.WriteLine("=---------- MENU --------=\n");
         Console.WriteLine("1.Add Vehicle");
@@ -82,12 +75,12 @@ public class Controller
         Console.WriteLine("7.Exit");
 
         Console.Write("> ");
-        var data = Console.In.ReadLine();
+        var input = Console.In.ReadLine();
         Console.WriteLine("\n\n");
-
+        
         try
         {
-            var res = int.Parse(data);
+            var res = int.Parse(input);
 
             if (res > 7)
             {
@@ -97,14 +90,25 @@ public class Controller
         catch (ArgumentException e)
         {
             Console.WriteLine(e.Message);
+            return "";
+        }
+        catch (FormatException e)
+        {
+            Console.WriteLine("Warning: input has to be integer!\n\n");
+            return "";
         }
         catch (Exception e)
         {
             Console.WriteLine("Warning: input has to be integer!\n\n");
-
+            return "";
         }
 
-        switch (int.Parse(data)) 
+        return input;
+    }
+
+    public void excecuteChoosedMenu(string input)
+    {
+        switch (int.Parse(input)) 
         {
             case 1:
                 parkingService.addVehicle();

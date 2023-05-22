@@ -17,19 +17,18 @@ public class ParkingService: IParkingService
     public void addVehicle()
     {
         Console.WriteLine("ADD VEHICLE ---------------------->");
-        Console.Write("Type > ");
+        Console.Write("Park > ");
         var stringVehicle = Console.In.ReadLine();
         var vehicleData = stringVehicle.Split(" ");
-        string registrationNumber = vehicleData[1];
-        Console.WriteLine(registrationNumber);
-        VehicleColor color = VehicleColor.ABU;
-        VehicleType vehicleType = VehicleType.MOBIL;
+        string registrationNumber = vehicleData[0];
+        VehicleColor color;
+        VehicleType vehicleType;
         
 
         try
         {
-            color = VehicleColorExtention.convertVehicleColor(vehicleData[2]);
-            vehicleType = VehicleTypeExtention.convertVehicleType(vehicleData[3]);
+            color = VehicleColorExtention.convertVehicleColor(vehicleData[1]);
+            vehicleType = VehicleTypeExtention.convertVehicleType(vehicleData[2]);
 
         }
         catch (Exception e)
@@ -66,6 +65,7 @@ public class ParkingService: IParkingService
         var vehicles = parkingRepository.getAllVehicles();
         Console.WriteLine("Available vehicles in parking slot: \n");
         Console.WriteLine("Slot\t\tNo.\t\t\tType\t\tColour");
+        
         for (var i = 0; i < vehicles.Count; i++)
         {
             if (vehicles[i].registrationNumber == null)
@@ -83,7 +83,7 @@ public class ParkingService: IParkingService
         Console.WriteLine("REGISTRATION NUMBER FOR VEHICLES WITH COLOR ------>");
         Console.Write("Enter color > ");
         var input = Console.In.ReadLine();
-        VehicleColor color = VehicleColor.ABU;
+        VehicleColor color;
         try
         {
             color = VehicleColorExtention.convertVehicleColor(input);

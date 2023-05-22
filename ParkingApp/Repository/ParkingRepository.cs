@@ -42,7 +42,7 @@ public class ParkingRepository
         {
             return "Sorry, parking is full";
         }
-        var result = parkingSlot.FindIndex(v => v == null);
+        var result = parkingSlot.FindIndex(v => v.registrationNumber == null);
         if (result == -1)
         {
             parkingSlot.Add(vehicle);
@@ -58,7 +58,6 @@ public class ParkingRepository
     public string reduceVehicle(int slot)
     {
         parkingSlot[slot - 1] = new Vehicle();
-        Console.WriteLine(parkingSlot[slot - 1]);
         return $"Slot number {slot} is free";
     }
 }
