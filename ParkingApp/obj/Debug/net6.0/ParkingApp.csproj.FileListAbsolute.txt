@@ -1,0 +1,15 @@
+/home/zan-121/RiderProjects/ParkingApp/ParkingApp/bin/Debug/net6.0/ParkingApp
+/home/zan-121/RiderProjects/ParkingApp/ParkingApp/bin/Debug/net6.0/ParkingApp.deps.json
+/home/zan-121/RiderProjects/ParkingApp/ParkingApp/bin/Debug/net6.0/ParkingApp.runtimeconfig.json
+/home/zan-121/RiderProjects/ParkingApp/ParkingApp/bin/Debug/net6.0/ParkingApp.dll
+/home/zan-121/RiderProjects/ParkingApp/ParkingApp/bin/Debug/net6.0/ParkingApp.pdb
+/home/zan-121/RiderProjects/ParkingApp/ParkingApp/obj/Debug/net6.0/ParkingApp.csproj.AssemblyReference.cache
+/home/zan-121/RiderProjects/ParkingApp/ParkingApp/obj/Debug/net6.0/ParkingApp.GeneratedMSBuildEditorConfig.editorconfig
+/home/zan-121/RiderProjects/ParkingApp/ParkingApp/obj/Debug/net6.0/ParkingApp.AssemblyInfoInputs.cache
+/home/zan-121/RiderProjects/ParkingApp/ParkingApp/obj/Debug/net6.0/ParkingApp.AssemblyInfo.cs
+/home/zan-121/RiderProjects/ParkingApp/ParkingApp/obj/Debug/net6.0/ParkingApp.csproj.CoreCompileInputs.cache
+/home/zan-121/RiderProjects/ParkingApp/ParkingApp/obj/Debug/net6.0/ParkingApp.dll
+/home/zan-121/RiderProjects/ParkingApp/ParkingApp/obj/Debug/net6.0/refint/ParkingApp.dll
+/home/zan-121/RiderProjects/ParkingApp/ParkingApp/obj/Debug/net6.0/ParkingApp.pdb
+/home/zan-121/RiderProjects/ParkingApp/ParkingApp/obj/Debug/net6.0/ParkingApp.genruntimeconfig.cache
+/home/zan-121/RiderProjects/ParkingApp/ParkingApp/obj/Debug/net6.0/ref/ParkingApp.dll
